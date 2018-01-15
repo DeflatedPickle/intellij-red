@@ -1,4 +1,4 @@
-package kotlin.org.deflatedpickle.red
+package com.deflatedpickle.red
 
 import com.intellij.lang.Language
 
