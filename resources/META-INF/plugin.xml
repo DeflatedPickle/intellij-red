@@ -1,7 +1,7 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
-  <version>1.0</version>
+  <id>com.deflatedpickle.red</id>
+  <name>Red Language Support</name>
+  <version>1.0.0</version>
   <vendor>DeflatedPickle</vendor>
 
   <description><![CDATA[
