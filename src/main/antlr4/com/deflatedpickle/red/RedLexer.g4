@@ -1,0 +1,5 @@
+/*
+    Lexer
+ */
+
+lexer grammar RedLexer;
