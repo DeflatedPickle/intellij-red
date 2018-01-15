@@ -2,7 +2,7 @@
   <id>com.your.company.unique.plugin.id</id>
   <name>Plugin display name here</name>
   <version>1.0</version>
-  <vendor email="deflatedpickle@gmail.com">DeflatedPickle</vendor>
+  <vendor>DeflatedPickle</vendor>
 
   <description><![CDATA[
       Red language support.
