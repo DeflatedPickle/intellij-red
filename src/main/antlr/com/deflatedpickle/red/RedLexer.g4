@@ -12,19 +12,21 @@ ASSIGN: ':';
 OPEN_BRKT: '[';
 CLOSE_BRKT: ']';
 
+OPEN_BRACE: '{';
+CLOSE_BRACE: '}';
+
 PRINT: 'print';
 
 COMMENT: ';' ~[\r\n]* -> skip;
-MULTI_COMMENT: ID '{' ~[\r\n]* '}' -> skip;
+MULTI_COMMENT: ID? OPEN_BRACE .*? CLOSE_BRACE -> skip;
 SPACE: [ \t\r\n] -> skip;
 
-STRING: ["] ~["\r\n]* ["];
+STRING: '"' ( '\\"' | . )*? '"';
 fragment LOWERCASE: [a-z];
 fragment UPPERCASE: [A-Z];
 fragment LETTER: (LOWERCASE | UPPERCASE)+;
 NUMBER: [0-9]+;
 
-ID: LOWERCASE+ (LETTER | NUMBER)*;
-VALUE: STRING | NUMBER | ID ;
+ID: LOWERCASE+ (LETTER | NUMBER | '-')*;
 
 WS: [ \t\r\n\f]+ -> skip;

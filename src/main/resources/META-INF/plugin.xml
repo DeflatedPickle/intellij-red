@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>com.deflatedpickle.red</id>
+    <name>Red Language Support</name>
+    <version>1.0.0</version>
+    <vendor>DeflatedPickle</vendor>
+
+    <description><![CDATA[
+      Support for the Red and Red/System language
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="com.deflatedpickle.red.RedFileTypeFactory"/>
+    </extensions>
+
+    <actions>
+    </actions>
+
+</idea-plugin>
