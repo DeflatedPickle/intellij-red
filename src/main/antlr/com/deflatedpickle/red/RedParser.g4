@@ -9,13 +9,13 @@ options {
     tokenVocab=RedLexer;
 }
 
-program: header? line* EOF;
+program: header line* EOF;
 line: statement;
 
-header: TITLE OPEN_BRKT header_options* CLOSE_BRKT;
-header_options: assignment;
+header: TITLE OPEN_BRKT header_assignment* CLOSE_BRKT;
 
-statement: print_stmt | assignment;
+statement: print_stmt | assignment | header_assignment;
 value: STRING | NUMBER | ID;
-assignment: (ID | OPTION) ASSIGN value;
+assignment: ID TYPE? ASSIGN value;
+header_assignment: OPTION ASSIGN value;
 print_stmt: PRINT value;
